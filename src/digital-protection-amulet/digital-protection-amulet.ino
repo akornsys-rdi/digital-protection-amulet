@@ -26,7 +26,7 @@
 #define EE_ID 0x38             //8 bytes
 #define EE_MODEL 0x40          //32 bytes
 
-// SPELL PAGE 928 BYTES (14 BYTES LIBRE)
+// SPELL PAGE 928 BYTES (10 BYTES LIBRE)
 #define EE_SPELL 0x60          //864 bytes     Spell msg (US after title, title first)
 #define EE_META_HASH 0x3C0     //32 bytes      Spell hash (sha256)
 #define EE_META_LENGTH 0x3E0   //2 bytes       Spell msg size
