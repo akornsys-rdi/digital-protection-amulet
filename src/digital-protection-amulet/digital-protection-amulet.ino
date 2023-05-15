@@ -31,9 +31,9 @@
 #define EE_META_HASH 0x3C0     //32 bytes      Spell hash (sha256)
 #define EE_META_LENGTH 0x3E0   //2 bytes       Spell msg size
 #define EE_META_REV 0x3E2      //2 bytes       Spell revision
-#define EE_META_EPOCH 0x3E4    //4 bytes       Spell epoch
-#define EE_META_I18N 0x3E8     //3 bytes       Spell lang (ISO 639‑3) "spa"
-#define EE_META_CHSUM 0x3EB    //1 bytes       Spell chsum (sum)
+#define EE_META_EPOCH 0x3E4    //8 bytes       Spell epoch (64-bit unix epoch)
+#define EE_META_I18N 0x3EC     //3 bytes       Spell lang (ISO 639‑3) "spa"
+#define EE_META_CHSUM 0x3EF    //1 bytes       Spell chsum (sum8)
 #define EE_META_TIMES 0x3FA    //2 bytes       Page times written
 #define EE_META_LINKFWD 0x3FC  //2 bytes       Next page
 #define EE_META_LINKBWD 0x3FE  //2 bytes       Previous page
