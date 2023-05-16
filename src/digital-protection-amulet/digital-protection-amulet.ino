@@ -14,17 +14,16 @@
 #define EE_FS_VERSION 0x08     //2 bytes
 #define EE_FS_SIZE 0x0A        //4 bytes
 
-// CONFIG 32 BYTES (12 BYTES LIBRES)
+// DEVICE CONFIG 32 BYTES (7 BYTES LIBRES)
 #define EE_PAGE_COUNT 0x10     //2 bytes
 #define EE_BAUDRATE 0x12       //1 bytes
 #define EE_CONFIG1 0x13        //1 bytes (aes128) bit0: CRYPTO
+#define EE_ID 0x18             //8 bytes
 #define EE_PASS 0x20           //16 bytes (sha256 & 0xFFFF0000)
-
-// DEVICE 48 BYTES (3 BYTES LIBRES)
 #define EE_VERSION 0x30        //4 bytes
 #define EE_EDITION 0x34        //1 bytes
-#define EE_ID 0x38             //8 bytes
-#define EE_MODEL 0x40          //32 bytes
+#define EE_GROUP 0x38          //8 bytes
+#define EE_NAME 0x40           //32 bytes
 
 // SPELL PAGE 928 BYTES (10 BYTES LIBRE)
 #define EE_SPELL 0x60          //864 bytes     Spell msg (US after title, title first)
