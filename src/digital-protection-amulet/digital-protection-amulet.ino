@@ -14,14 +14,16 @@
 #define EE_FS_VERSION 0x08     //2 bytes
 #define EE_FS_SIZE 0x0A        //4 bytes
 
-// DEVICE CONFIG 32 BYTES (7 BYTES LIBRES)
+// DEVICE CONFIG 32 BYTES (4 BYTES LIBRES)
 #define EE_PAGE_COUNT 0x10     //2 bytes
 #define EE_BAUDRATE 0x12       //1 bytes
-#define EE_CONFIG1 0x13        //1 bytes (aes128) bit0: CRYPTO
+#define EE_CONFIG1 0x13        //1 bytes (aes128) bit7: CRYPTO; bit6: INVALIDATE; bit5: RESTORE; bit4: LOCKED
 #define EE_ID 0x18             //8 bytes
 #define EE_PASS 0x20           //16 bytes (sha256 & 0xFFFF0000)
 #define EE_VERSION 0x30        //4 bytes
 #define EE_EDITION 0x34        //1 bytes
+#define EE_COLOR_PROFILE 0x35  //1 bytes
+#define EE_PIN 0x36            //2 bytes BCD 16-bits pearson hash
 #define EE_GROUP 0x38          //8 bytes
 #define EE_NAME 0x40           //32 bytes
 
